@@ -113,8 +113,6 @@ public MemberRepository memberRepository(){
 
 -  그럼 어떻게 해야할까? 디자인 패턴 중 객체를 한번만 생성해서 공유하는 싱글톤 패턴을 사용해야한다.
 
-## 
-
 ## 싱글톤 패턴
 
 - 1개의 객체 인스턴스 보장
@@ -124,14 +122,10 @@ public MemberRepository memberRepository(){
 - 문제점: 
 
   - 전역상태이어서 추적하기 어렵고, 
-
   - 상속할 수 없어 다형성과 같은 객체지향 특징에 맞지 않음. 
-
   - 꼭 1개만 생성한다고 완전히 보장하진 못한다. (reflection..)
-
   - 등..
-
-    
+- 참고 -  [private_생성자나_열거타입으로_싱글턴임을_보증하라_노을.md](https://github.com/d-h-k/Effective-Java-Study/blob/main/noeul/3_private_생성자나_열거타입으로_싱글턴임을_보증하라_노을.md)
 
 ## 싱글톤 컨테이너
 
