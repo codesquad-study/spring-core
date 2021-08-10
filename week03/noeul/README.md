@@ -181,8 +181,6 @@ public void close() {
 
 # 빈 스코프
 
----
-
 ## 빈 스코프란?
 
 - 빈의 생명주기
@@ -242,7 +240,9 @@ public int logic() {
 
 - 스프링 애플리케이션 컨텍스트 전체를 주입받게 되면, 스프링 컨테이너에 종속적인 코드가 되고, 단위 테스트가 어렵다??
 
-  
+- `@SpringBootTest`
+
+  > 제 생각에 단위 테스트를 JUnit 같이 순수 자바로 구현하게 될 경우에는 스프링 컨테이너에 종속적인 클래스를 제대로 테스트할 수 없을 것 같아용 
 
 ### 지정한 프로토타입 빈을 컨테이너에서 대신 찾아주는 DL 기능만 제공하는게 필요.
 
@@ -274,7 +274,7 @@ public int logic() {
 
 ```java
 @Component
-@Scope(value = "request")
+@Scope(value = "request", )
 public class MyLogger {
 ```
 
@@ -298,7 +298,7 @@ refer to it from a singleton;
 
 ## 스코프와 프록시 
 
-
+- Provider 정의도 은근 귀찮으니까 `@Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS)` 같이 옵션을 줘서 쉽게 사용할 수 있음.
 
 ---
 
