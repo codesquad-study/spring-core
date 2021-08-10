@@ -274,7 +274,7 @@ public int logic() {
 
 ```java
 @Component
-@Scope(value = "request", )
+@Scope(value = "request")
 public class MyLogger {
 ```
 
