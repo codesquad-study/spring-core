@@ -5,7 +5,7 @@
 - 스프링 컨테이너
 - BeanFactory 인터페이스를 상속하고 있는 인터페이스
   - BeanFactory 외 MessageSource, EnvironmentCapable, ApplicationEventPubilsher, ResourceLoader 상속
-- 구현 객체: AnnotationConfig, ApplicationContext
+- 구현 객체: AnnotationConfigApplicationContext
 - 빈 이름 = 메서드 이름
   - `@Bean(name="jane")`을 통해 이름 지정 가능
   - 빈의 이름이 중복되면 한 빈이 무시되거나 오류가 발생한다.
